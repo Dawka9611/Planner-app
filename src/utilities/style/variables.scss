@@ -1,0 +1,38 @@
+$light-colors: (
+    noapp: #999999,
+    hr: #ff8360,
+    revenue: #cd4e9d,
+    calendar: #5c8eca,
+    doc: #2085AA,
+    mc: #2085aa,
+    crm: #dd8447,
+    settings: #cc474f,
+    bills: #3ca09d,
+    accounting: #e2bb62,
+    customers: #dd8447,
+    reporting: #B280EA,
+    good: #3dbd90,
+    neutral: #bc8d3f,
+    bad: #47a6cc
+  );
+  
+  $dark-colors: (
+    noapp: #666666,
+    hr: #d16c59,
+    revenue: #b04387,
+    calendar: #3a597e,
+    doc: #115D78,
+    mc: #115d78,
+    crm: #c46627,
+    settings: #a83b42,
+    bills: #2c8484,
+    accounting: #ddb047,
+    customers: #c46627,
+    reporting: #936BC1,
+    good: #2b8666,
+    neutral: #ac7513,
+    bad: #a83b42
+  );
+
+
+  $navbarWidth: 230px;
