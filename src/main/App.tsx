@@ -1,18 +1,29 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import '../utilities/style/App.scss'
 import Routers from './Routers'
+// import Routers from './Routers'
+import styled, { ThemeProvider } from 'styled-components'
+import { darkTheme, sizes } from '../utilities/style/Variables'
+import { UserContextProvider } from '../utilities/context/UserContext'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="scssClass">
-      <div className='dark-colors'>
-        <Routers />
-      </div>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <UserContextProvider>
+        <AppStyle>
+          <div className='dark-colors'>
+            <Routers />
+          </div>
+        </AppStyle>
+      </UserContextProvider>
+    </ThemeProvider>
   )
 }
 
 export default App
+
+const AppStyle = styled.div`
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: ${sizes.fontSizeMedium};
+  box-sizing: border-box;
+`
