@@ -36,11 +36,11 @@ const TopbarStyle = styled.div`
     height: ${sizes.topbarHeight};
     box-sizing: border-box;
     width: 100%;
-    background-color: ${p => p.theme.mainColorDark};
+    background-color: ${p => p.theme.mainColorDarker};
     color: ${p => p.theme.textColor};
     display: flex;
     justify-content: flex-end;
-    padding: ${sizes.spaceMedium} ${sizes.spaceLarger};
+    padding: ${sizes.spaceMedium} ${sizes.spaceLarge};
     .topbarItem{
         display: flex;
         column-gap: ${sizes.spaceSmall};
@@ -56,9 +56,10 @@ const TopbarStyle = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: ${p => p.theme.mainColorDark};
+            background-color: ${p => p.theme.mainColorDarker};
             background: ${p => p.theme.gradientSyan};
-            backdrop-filter: ${sizes.backdropFilter};
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
             font-size: ${sizes.iconSize};
             &:hover{
                 color: ${p => p.theme.textColorHover};

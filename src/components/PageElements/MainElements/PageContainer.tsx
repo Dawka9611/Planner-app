@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { useContext } from "react"
 import UserContext from "../../../utilities/context/UserContext"
 import { sizes } from "../../../utilities/style/Variables"
+import useWindowDimensions from "../../../utilities/hooks/windowDimensions"
+import BurgerSidebar from "../OtherElements/BurgerSidebar"
+import Sidebar from "../OtherElements/Sidebar"
 
 type Props = {
     children: JSX.Element
@@ -11,10 +14,14 @@ type Props = {
 
 const PageContainer = ({ children }: Props) => {
     const { user } = useContext(UserContext)
+    const { mobileWidth } = useWindowDimensions()
 
     return <PageContainerStyle>
         {user?.token ? <div className="sidebar">
-            <Navigation />
+            {mobileWidth
+                ? <BurgerSidebar />
+                : <Sidebar/>
+            }
         </div>
             : ""}
         <div className="rightSector">
@@ -30,21 +37,27 @@ export default PageContainer
 
 const PageContainerStyle = styled.div`
     display: flex;
-    width: 100%;
-    height: 100%;
     min-height: 100vh;
+    max-height: fit-content;
     background-color: ${p => p.theme.mainColorLighter};
     color: ${p => p.theme.textColor};
+
     .rightSector{
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
         align-items: center;
+        min-height: 100vh;
+        max-height: fit-content;
+        .topbar{
+            position: sticky;
+        }
         .mainSector{
             min-width: min(100%, 1500px);
             min-height: calc(100vh - 70px);
             border: ${p => p.theme.borderLighter};
+            max-height: fit-content;
         }
     }
 

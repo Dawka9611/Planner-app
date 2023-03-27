@@ -11,8 +11,7 @@ export default Sidebar
 
 const SidebarStyle = styled.div`
     width: ${sizes.sidebarSize};
+    background-color: ${p => p.theme.mainColorDarker};
+    color: ${p => p.theme.textColor};
     height: 100%;
-    min-height: 100vh;
-    background-color: ${p => p.theme.mainColorDark};
-    color: ${p => p.theme.textColor}
 `
