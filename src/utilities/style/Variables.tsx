@@ -11,6 +11,7 @@ export const darkTheme = {
     yellow: 'rgb(244, 208, 63)',
     gradientSyan: "linear-gradient(180deg, rgb(7, 9, 24) 10%, rgb(15, 156, 161) 100%, rgb(88, 214, 141) 50%)",
     borderLighter: "1px solid rgb(240, 240, 240)",
+    borderLightHover: "1px solid rgb(204, 209, 209)",
     borderSyan: "1px solid rgb(15, 156, 161)",
 
   }
@@ -25,7 +26,7 @@ export const darkTheme = {
 
 
 export const sizes ={
-    sidebarSize: "230px",
+    sidebarSize: "250px",
     topbarHeight: "70px",
     spaceSmallest:"6px",
     spaceSmall: "8px",
@@ -38,6 +39,7 @@ export const sizes ={
     fontSizeLarge: '16px',
     fontSizeLargest: "20px",
     iconSize: '18px',
+    iconSizeLarge: '22px',
     backdropFilter: "blur(5px)",
     fontWeightBold: "600",
     fontWeightBolder: "700",

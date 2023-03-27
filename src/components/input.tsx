@@ -18,6 +18,7 @@ export const Textarea = ({ label, required, name, rows, cols, Value, Handler, co
     </InputStyle>
 
 }
+
 export const TextInput = ({ label, required, name, Value, Handler, color = "dark" }) => {
     return <InputStyle color={color}>
         <div className="label">
@@ -26,6 +27,22 @@ export const TextInput = ({ label, required, name, Value, Handler, color = "dark
         <input
             name={name}
             value={Value}
+            onChange={e => Handler(name, e.target.value)}
+            required={required}
+            className="input textinput"
+        />
+    </InputStyle>
+}
+
+export const EmailInput = ({ label, required, name, Value, Handler, color = "dark" }) => {
+    return <InputStyle color={color}>
+        <div className="label">
+            {label}
+        </div>
+        <input
+            name={name}
+            value={Value}
+            type="email"
             onChange={e => Handler(name, e.target.value)}
             required={required}
             className="input textinput"

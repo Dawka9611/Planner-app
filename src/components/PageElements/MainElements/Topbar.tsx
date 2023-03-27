@@ -33,6 +33,10 @@ const Topbar = () => {
 export default Topbar
 
 const TopbarStyle = styled.div`
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 100;
     height: ${sizes.topbarHeight};
     box-sizing: border-box;
     width: 100%;
@@ -61,8 +65,11 @@ const TopbarStyle = styled.div`
             backdrop-filter: blur(5px);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
             font-size: ${sizes.iconSize};
+            transition: all ease-in-out 0.2s;
             &:hover{
                 color: ${p => p.theme.textColorHover};
+                /* border: ${p => p.theme.borderLightHover} */
+                scale: 1.02;
             }
         }
         .noGradient{
@@ -75,7 +82,6 @@ const TopbarStyle = styled.div`
             cursor: pointer;
             .username{
                 color: ${p => p.theme.textColorHover};
-
             }
         }
     }

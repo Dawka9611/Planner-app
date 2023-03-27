@@ -39,8 +39,9 @@ const PageContainerStyle = styled.div`
     display: flex;
     min-height: 100vh;
     max-height: fit-content;
-    background-color: ${p => p.theme.mainColorLighter};
+    background-color: ${p => p.theme.mainColorDark};
     color: ${p => p.theme.textColor};
+    position: relative;
 
     .rightSector{
         flex-grow: 1;
@@ -50,14 +51,14 @@ const PageContainerStyle = styled.div`
         align-items: center;
         min-height: 100vh;
         max-height: fit-content;
-        .topbar{
-            position: sticky;
-        }
+        position: relative;
+
         .mainSector{
             min-width: min(100%, 1500px);
             min-height: calc(100vh - 70px);
-            border: ${p => p.theme.borderLighter};
             max-height: fit-content;
+            padding: ${sizes.spaceLarge};
+
         }
     }
 

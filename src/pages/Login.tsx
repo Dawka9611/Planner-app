@@ -24,7 +24,7 @@ const Login = () => {
     }
 
     return <PageContainer>
-        <FromStyle>
+        <FromStyle height="420px">
             <div className="box" >
                 <div className="form">
                     <div className="title">
@@ -35,14 +35,14 @@ const Login = () => {
                             <TextInput
                                 Value={data.username}
                                 name='username'
-                                label="username"
+                                label="Нэвтрэх нэр"
                                 Handler={HandleChange}
                                 color="darker"
                             />
                             <Password
                                 Value={data.password}
                                 name='password'
-                                label="password"
+                                label="Нууц үг"
                                 Handler={HandleChange}
                                 color="darker"
                             />
@@ -82,16 +82,16 @@ export const FromStyle = styled.div`
     height: 100%;
 
     .box{
-        min-width: min(100%, 380px);
-        height: 420px;
+        min-width: min(100%, 400px);
+        height: ${p => p.height};
         position: relative;
         background-color: ${p => p.theme.mainColorDarker};
         overflow: hidden;
         border-radius: 8px;
         &::before{
             content: "";
-            width: 380px;
-            height: 420px;
+            width: 400px;
+            height:  ${p => p.height};
             position: absolute;
             background: linear-gradient(0deg, transparent, rgb(15, 156, 161), rgb(15, 156, 161)); 
             top: -50%;
@@ -101,8 +101,8 @@ export const FromStyle = styled.div`
         }
         &::after{
             content: "";
-            min-width: min(100%, 380px);
-            height: 420px;
+            min-width: min(100%, 400px);
+            height:  ${p => p.height};
             position: absolute;
             background: linear-gradient(0deg, transparent, ${p => p.theme.syan}, ${p => p.theme.syan}); 
             top: -50%;
