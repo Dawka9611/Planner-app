@@ -1,4 +1,4 @@
-import PageContainer from "../components/PageElements/MainElements/PageContainer"
+import PageContainer from "../components/PageElements/PageContainer"
 import styled from 'styled-components'
 import { sizes } from "../utilities/style/Variables"
 import { DateInput, Password, Textarea, TextInput, TimeInput } from "../components/input"
@@ -24,7 +24,7 @@ const Login = () => {
     }
 
     return <PageContainer>
-        <FromStyle height="420px">
+        <FormStyle height="420px">
             <div className="box" >
                 <div className="form">
                     <div className="title">
@@ -48,10 +48,12 @@ const Login = () => {
                             />
                         </div>
                         <div className="links">
-                            <div className="link">
-                                Нууц үг мартсан
-                            </div>
-                            <Link to='/signup'>
+                            <Link to="/forgot-password" className="linkTag">
+                                <div className="link">
+                                    Нууц үг мартсан
+                                </div>
+                            </Link>
+                            <Link to='/signup' className="linkTag">
                                 <div className="link bold">
                                     Бүртгүүлэх
                                 </div>
@@ -66,14 +68,14 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </FromStyle>
+        </FormStyle>
     </PageContainer>
 
 }
 
 export default Login
 
-export const FromStyle = styled.div`
+export const FormStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,15 +150,19 @@ export const FromStyle = styled.div`
                     column-gap: ${sizes.spaceMedium};
                     min-width: min(100%, 300px);
                     font-size: ${sizes.fontSizeSmall};
+                    .linkTag{
+                        text-decoration: none;
+                    }
                     .link{
-                        text-decoration: underline;
+                        color: ${p => p.theme.syan};
                         &:hover{
                             cursor: pointer;
+                            text-decoration: underline;
                         }
                     }
                     .bold{
                         font-weight: ${sizes.fontWeightBold};
-                        color: ${p => p.theme.textColorHover}
+                        color: ${p => p.theme.textColorHover};
                     }
                 }
                 .buttonContainer{

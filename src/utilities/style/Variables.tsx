@@ -28,7 +28,7 @@ export const darkTheme = {
 export const sizes ={
     sidebarSize: "250px",
     topbarHeight: "70px",
-    spaceSmallest:"6px",
+    spaceSmallest:"4px",
     spaceSmall: "8px",
     spaceMedium: "12px",
     spaceLarge: '16px',

@@ -1,5 +1,5 @@
 import Navigation from "../components/PageElements/MainElements/Navigation"
-import PageContainer from "../components/PageElements/MainElements/PageContainer"
+import PageContainer from "../components/PageElements/PageContainer"
 import styled from "styled-components"
 
 const HelpPage = () => {
@@ -8,7 +8,7 @@ const HelpPage = () => {
         <PageContainer>
             <HelpPageStyle>
                 <div className="quotes">
-hhhh
+                    Help
                 </div>
                 <div className="opportunities">
 

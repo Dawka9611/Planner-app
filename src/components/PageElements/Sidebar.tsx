@@ -1,15 +1,16 @@
-import { BsBarChart, BsCalendar3, BsCalendarDay, BsCalendarMonth, BsCalendarWeek, BsQuestionLg } from 'react-icons/bs'
+import { BsBarChart, BsCalendar3, BsCalendarDay, BsCalendarMonth, BsCalendarWeek, BsHouse, BsHouseDoor, BsQuestionLg } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { sizes } from '../../../utilities/style/Variables'
+import { sizes } from '../../utilities/style/Variables'
 
 const sidebarData = [
+    { label: "Нүүр хуудас", link: "/", icon: <BsHouse /> },
     { label: "Жилийн төлөвлөгөө", link: "/year-plan", icon: <BsCalendar3 /> },
-    { label: "Сарын төлөвлөгөө", link: "", icon: <BsCalendarMonth /> },
-    { label: "7 хоногийн төлөвлөгөө", link: "", icon: <BsCalendarWeek /> },
-    { label: "Өдрийн төлөвлөгөө", link: "", icon: <BsCalendarDay /> },
-    { label: "Гүйцэтгэл хянах", link: "", icon: <BsBarChart /> },
-    { label: "Тусламж", link: "", icon: <BsQuestionLg /> },
+    { label: "Сарын төлөвлөгөө", link: "/month-plan", icon: <BsCalendarMonth /> },
+    { label: "7 хоногийн төлөвлөгөө", link: "/week-plan", icon: <BsCalendarWeek /> },
+    { label: "Өдрийн төлөвлөгөө", link: "/day-plan", icon: <BsCalendarDay /> },
+    { label: "Гүйцэтгэл хянах", link: "/performance", icon: <BsBarChart /> },
+    { label: "Тусламж", link: "/help", icon: <BsQuestionLg /> },
 ]
 const Sidebar = () => {
     return <SidebarStyle>
@@ -34,13 +35,14 @@ const SidebarStyle = styled.div`
     height: 100%;
     padding: ${sizes.spaceMedium};
     box-sizing: border-box;
+
     .contentBox{
         margin-top: 120px;
         /* border: 1px solid white; */
         .linkElement{
             padding: ${sizes.spaceMedium} ${sizes.spaceSmall};
-            transition: all ease-in-out 0.3s;
             border-radius: 4px;
+            transition: all ease-in-out 0.3s;
             .link{
                 display: flex;
                 align-items: center;
@@ -63,6 +65,9 @@ const SidebarStyle = styled.div`
                 .icon{
                     color: ${p => p.theme.textColor};
                 }
+            }
+            &:active{
+                scale: 0.95;
             }
             }
         }

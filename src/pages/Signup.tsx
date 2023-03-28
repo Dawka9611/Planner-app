@@ -1,7 +1,7 @@
 import { EmailInput, Password, TextInput } from "../components/input"
 import { Link } from "react-router-dom"
-import PageContainer from "../components/PageElements/MainElements/PageContainer"
-import { FromStyle } from "./Login"
+import PageContainer from "../components/PageElements/PageContainer"
+import { FormStyle } from "./Login"
 import { useState } from "react"
 import Button from "../components/Button"
 
@@ -29,7 +29,7 @@ const Signup = () => {
     }
 
     return <PageContainer>
-        <FromStyle height="670px">
+        <FormStyle height="670px">
             <div className="box" >
                 <div className="form">
                     <div className="title">
@@ -75,7 +75,7 @@ const Signup = () => {
                         </div>
                         <div className="links">
                             <div />
-                            <Link to='/signup'>
+                            <Link to='/login' className="linkTag">
                                 <div className="link bold">
                                     Нэвтрэх
                                 </div>
@@ -90,7 +90,7 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-        </FromStyle>
+        </FormStyle>
     </PageContainer>
 }
 

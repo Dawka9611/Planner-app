@@ -1,5 +1,5 @@
 import Navigation from "../components/PageElements/MainElements/Navigation"
-import PageContainer from "../components/PageElements/MainElements/PageContainer"
+import PageContainer from "../components/PageElements/PageContainer"
 import styled from "styled-components"
 
 const YearPlan = () => {
@@ -8,7 +8,7 @@ const YearPlan = () => {
         <PageContainer>
             <YearPlanStyle>
                 <div className="quotes">
-hhhh
+Year
                 </div>
                 <div className="opportunities">
 

@@ -2,11 +2,11 @@ import Navigation from "./Navigation"
 import Topbar from "./Topbar"
 import styled from 'styled-components'
 import { useContext } from "react"
-import UserContext from "../../../utilities/context/UserContext"
-import { sizes } from "../../../utilities/style/Variables"
-import useWindowDimensions from "../../../utilities/hooks/windowDimensions"
-import BurgerSidebar from "../OtherElements/BurgerSidebar"
-import Sidebar from "../OtherElements/Sidebar"
+import UserContext from "../../utilities/context/UserContext"
+import { sizes } from "../../utilities/style/Variables"
+import useWindowDimensions from "../../utilities/hooks/windowDimensions"
+import BurgerSidebar from "../BurgerSidebar"
+import Sidebar from "./Sidebar"
 
 type Props = {
     children: JSX.Element
