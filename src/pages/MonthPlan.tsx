@@ -1,6 +1,7 @@
 import Navigation from "../components/PageElements/MainElements/Navigation"
 import PageContainer from "../components/PageElements/PageContainer"
 import styled from "styled-components"
+import MonthCalendar from "../components/PageElements/MonthCalendar"
 
 const MonthPlan = () => {
 
@@ -8,10 +9,10 @@ const MonthPlan = () => {
         <PageContainer>
             <MonthPlanStyle>
                 <div className="quotes">
-month
+                    month
                 </div>
                 <div className="opportunities">
-
+                    <MonthCalendar />
                 </div>
             </MonthPlanStyle>
         </PageContainer>

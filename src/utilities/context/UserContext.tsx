@@ -10,7 +10,8 @@ export const UserContextProvider = ({ children }) => {
     // const user = JSON.parse(localStorage?.user)
     const user = {
         name: "Dawka9611",
-        token: null
+        // token: null
+        token: "..."
     }
 
     return (

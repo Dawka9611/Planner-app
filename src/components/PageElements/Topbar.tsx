@@ -134,4 +134,7 @@ const TopbarStyle = styled.div`
             }
         }
     }
+    @media only screen and (max-width: 650px){
+        height: ${sizes.topbarHeightMobile};
+    }
 `

@@ -2,10 +2,11 @@ import { BsBarChart, BsCalendar3, BsCalendarDay, BsCalendarMonth, BsCalendarWeek
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { sizes } from '../../utilities/style/Variables'
+import MonthCalendar from './MonthCalendar'
 
 const sidebarData = [
-    { label: "Нүүр хуудас", link: "/", icon: <BsHouse /> },
-    { label: "Жилийн төлөвлөгөө", link: "/year-plan", icon: <BsCalendar3 /> },
+    // { label: "Нүүр хуудас", link: "/", icon: <BsHouse /> },
+    { label: "Жилийн хуанли", link: "/year-plan", icon: <BsCalendar3 /> },
     { label: "Сарын төлөвлөгөө", link: "/month-plan", icon: <BsCalendarMonth /> },
     { label: "7 хоногийн төлөвлөгөө", link: "/week-plan", icon: <BsCalendarWeek /> },
     { label: "Өдрийн төлөвлөгөө", link: "/day-plan", icon: <BsCalendarDay /> },
@@ -15,6 +16,7 @@ const sidebarData = [
 const Sidebar = () => {
     return <SidebarStyle>
         <div className='contentBox'>
+            <MonthCalendar/>
             {sidebarData.map(el => <div key={el.link} className="linkElement">
                 <Link to={el.link} className='link'>
                     <span className='icon'> {el.icon}</span>
@@ -32,12 +34,16 @@ const SidebarStyle = styled.div`
     width: ${sizes.sidebarSize};
     background-color: ${p => p.theme.mainColorDarker};
     color: ${p => p.theme.textColor};
+    min-height: 100vh;
     height: 100%;
     padding: ${sizes.spaceMedium};
     box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left:0;
 
     .contentBox{
-        margin-top: 120px;
+        margin-top: ${sizes.topbarHeight};
         /* border: 1px solid white; */
         .linkElement{
             padding: ${sizes.spaceMedium} ${sizes.spaceSmall};

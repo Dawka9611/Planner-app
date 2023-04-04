@@ -6,7 +6,7 @@ const getWindowDimensions = () => {
   return {
     width,
     height,
-    mobileWidth: width < 700 ? true : false
+    mobileWidth: width < 650 ? true : false
   };
 }
 

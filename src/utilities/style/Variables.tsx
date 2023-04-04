@@ -28,6 +28,7 @@ export const darkTheme = {
 export const sizes ={
     sidebarSize: "250px",
     topbarHeight: "70px",
+    topbarHeightMobile: "50px",
     spaceSmallest:"4px",
     spaceSmall: "8px",
     spaceMedium: "12px",
@@ -40,6 +41,7 @@ export const sizes ={
     fontSizeLargest: "20px",
     iconSize: '18px',
     iconSizeLarge: '22px',
+    iconSizeLargest: '32px',
     backdropFilter: "blur(5px)",
     fontWeightBold: "600",
     fontWeightBolder: "700",

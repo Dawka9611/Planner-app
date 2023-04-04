@@ -20,7 +20,7 @@ const PageContainer = ({ children }: Props) => {
         {user?.token ? <div className="sidebar">
             {mobileWidth
                 ? <BurgerSidebar />
-                : <Sidebar/>
+                : <Sidebar />
             }
         </div>
             : ""}
@@ -42,6 +42,11 @@ const PageContainerStyle = styled.div`
     background-color: ${p => p.theme.mainColorDark};
     color: ${p => p.theme.textColor};
     position: relative;
+    .sidebar{
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
 
     .rightSector{
         flex-grow: 1;
@@ -52,13 +57,17 @@ const PageContainerStyle = styled.div`
         min-height: 100vh;
         max-height: fit-content;
         position: relative;
+        box-sizing: border-box;
 
         .mainSector{
             min-width: min(100%, 1500px);
             min-height: calc(100vh - 70px);
             max-height: fit-content;
             padding: ${sizes.spaceLarge};
-
+            border: 1px solid white;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
         }
     }
 
